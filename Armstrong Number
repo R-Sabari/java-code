@@ -1,0 +1,33 @@
+import java.util.*;
+class Main{
+    public static void main(String[]args)
+   {
+       Scanner sc=new Scanner(System.in);
+       int num=sc.nextInt();
+       int tem=num;
+       int org=num;
+       int digits=0;
+       while(tem>0)
+       {
+           digits++;
+           tem=tem/10;
+       }
+       tem=num;
+       int sum=0;
+       while(tem>0)
+       {
+           int digit=tem%10;
+           sum += (int) Math.pow(digit, digits);
+            tem = tem/ 10;
+        }
+
+        if (sum == org) {
+            System.out.println("is an Armstrong Number");
+        } else {
+            System.out.println(" is NOT an Armstrong Number");
+        }
+           
+       }
+       
+       
+   }
